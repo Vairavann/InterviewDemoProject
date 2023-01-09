@@ -141,9 +141,120 @@ public class Demo_Site {
 	     WebElement custDeleteId=  driver.findElement(By.name("cusid"));
 	     custDeleteId.sendKeys("987654");
 
-	     driver.findElement(By.name("AccSubmit")).click();
+	     WebElement delCusSubmit = driver.findElement(By.name("AccSubmit"));
+	     delCusSubmit.click();
 	     
-	     driver.close();
+	     
+	     //WithDrawal
+	   
+
+	     WebElement withDrawal = driver.findElement(By.linkText("Withdrawal"));
+	     withDrawal.click();
+	     
+	     WebElement wdAccNo=  driver.findElement(By.name("accountno"));
+	     wdAccNo.sendKeys("987654");
+
+	     WebElement wdAmount=  driver.findElement(By.name("ammount"));
+	     wdAmount.sendKeys("500000");
+
+	     WebElement wdDescription=  driver.findElement(By.name("desc"));
+	     wdDescription.sendKeys("Main");
+	     
+	     WebElement wdSubmit = driver.findElement(By.name("AccSubmit"));
+	     wdSubmit.click();
+	     
+	     //Fund Transfer
+	     
+	     WebElement fundTransfer = driver.findElement(By.linkText("Fund Transfer"));
+	     fundTransfer.click();
+	     
+	     WebElement payersAcc=  driver.findElement(By.name("payersaccount"));
+	     payersAcc.sendKeys("987654");
+	     
+	     WebElement payeeAcc=  driver.findElement(By.name("payeeaccount"));
+	     payeeAcc.sendKeys("123456");
+	     
+	     WebElement fdAmount=  driver.findElement(By.name("ammount"));
+	     fdAmount.sendKeys("200000");
+
+	     WebElement fdDescription=  driver.findElement(By.name("desc"));
+	     fdDescription.sendKeys("Main");
+	     
+	     WebElement fdSubmit = driver.findElement(By.name("AccSubmit"));
+	     fdSubmit.click();
+	     
+	     //Change Password
+	     
+	     WebElement changePassword = driver.findElement(By.linkText("Change Password"));
+	     changePassword.click();
+	     
+	     WebElement oldPass=  driver.findElement(By.name("oldpassword"));
+	     oldPass.sendKeys("me@123");
+
+	     WebElement newPass=  driver.findElement(By.name("newpassword"));
+	     newPass.sendKeys("pass@123");
+
+	     WebElement confirmPass=  driver.findElement(By.name("confirmpassword"));
+	     confirmPass.sendKeys("pass@123");
+	     
+	     WebElement cpSubmit = driver.findElement(By.name("sub"));
+	     cpSubmit.click();
+
+	     
+	     //BalanceEnquiry
+	     
+	     WebElement balEnquiry = driver.findElement(By.linkText(" Balance Enquiry"));
+	     balEnquiry.click();
+	     
+	     WebElement beAccNo=  driver.findElement(By.name("accountno"));
+	     beAccNo.sendKeys("987654");
+	     
+	     
+	     WebElement beSubmit = driver.findElement(By.name("AccSubmit"));
+	     beSubmit.click();
+	     
+	     //MiniStatement
+	     
+	     WebElement miniStatement = driver.findElement(By.linkText(" Mini Statement"));
+	     miniStatement.click();
+	     
+	     WebElement msAccNo=  driver.findElement(By.name("accountno"));
+	     msAccNo.sendKeys("987654");
+	     
+	     
+	     WebElement msSubmit = driver.findElement(By.name("AccSubmit"));
+	     msSubmit.click();
+	     
+	     //CustomisedStatement
+	     
+	     WebElement customisedStatement = driver.findElement(By.linkText(" Customised Statement"));
+	     customisedStatement.click();
+	     
+	     WebElement csAccNo=  driver.findElement(By.name("accountno"));
+	     csAccNo.sendKeys("987654");
+	     
+	     WebElement fromDate=  driver.findElement(By.name("fdate"));
+	     fromDate.sendKeys("15/05/2015");
+	     
+	     WebElement toDate=  driver.findElement(By.name("tdate"));
+	     toDate.sendKeys("15/05/2022");
+	     
+	     WebElement miniTransValue=  driver.findElement(By.name("amountlowerlimit"));
+	     miniTransValue.sendKeys("5000");
+	     
+	     WebElement noOfTrans=  driver.findElement(By.name("numtransaction"));
+	     noOfTrans.sendKeys("52");
+	     
+	     WebElement csSubmit = driver.findElement(By.name("AccSubmit"));
+	     csSubmit.click();
+	     
+	     //LogOut
+	     
+	     WebElement logOut = driver.findElement(By.linkText("Log out"));
+	     logOut.click();
+	     
+	     
+	    driver.close();
 	}
 
 
